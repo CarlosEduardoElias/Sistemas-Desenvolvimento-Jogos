@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>globais</name>
+    <events>
+        <variable constant="0" name="delay_max" sid="289069508578642" static="0" type="number">0.5</variable>
+        <variable constant="0" name="delay" sid="196698963268285" static="0" type="number">0</variable>
+        <variable constant="0" name="combo" sid="971327460872954" static="0" type="number">0</variable>
+        <variable constant="0" name="score" sid="287093846441561" static="0" type="number">0</variable>
+        <variable constant="0" name="timezinho" sid="680229702419288" static="0" type="number">0</variable>
+        <variable constant="0" name="heart" sid="969070280969451" static="0" type="number">0</variable>
+        <variable constant="0" name="slash_y" sid="921824730577415" static="0" type="number">0</variable>
+        <variable constant="0" name="slash_x" sid="646403124708485" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>

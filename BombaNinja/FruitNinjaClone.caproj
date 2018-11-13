@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>FruitNinjaClone</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>1ve4jvvb7yqe6</unique-id>
+    <saved-with-version>26200</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1708</width>
+        <height>960</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Sprite" sid="353909112243994">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="515285390459931" speed="5">
+                    <frame duration="1" hotspotX="0.500363" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\bg.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="slash" sid="777317014014814">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="193109524284487">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="770960283307218" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.529412" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="491940535260151">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Frutinha" sid="736029972438224">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="is_destroy" sid="155569258545123" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="190634867544973">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="753577211547602">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="661720329324086" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501393" original-source="C:\Users\Alfa\Desktop\Arquivos\Sprites\1.png">
+                        <collision-poly>
+                            <point x="0.324219" y="0.231198" />
+                            <point x="0.5" y="0.0696379" />
+                            <point x="0.871094" y="0.091922" />
+                            <point x="0.753906" y="0.498607" />
+                            <point x="0.902344" y="0.930362" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0703125" y="0.949861" />
+                            <point x="0.148438" y="0.498607" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Sprites\2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Sprites\3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502146" original-source="C:\Users\Alfa\Desktop\Arquivos\Sprites\4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Sprites\5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501992" original-source="C:\Users\Alfa\Desktop\Arquivos\Sprites\6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Sprites\bomb.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Sprites\powerup_ice.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="102437660449596">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Audio" sid="691240729298868">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Particles" sid="331804896686725">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Particles2" sid="253373233638431">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="half_1" sid="772144525302512">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="619285907993337">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="941040097215841">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="479770622116719" speed="0">
+                    <frame duration="1" hotspotX="0.504425" hotspotY="0.501393" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\pera_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\2 - Cópia.png">
+                        <collision-poly>
+                            <point x="0.584746" y="0.177835" />
+                            <point x="0.5" y="0.226804" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.948454" />
+                            <point x="0.330508" y="0.899485" />
+                            <point x="0.135593" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\abacaxi_1.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.502146" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\maca_1.png" />
+                    <frame duration="1" hotspotX="0.504425" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\morango_0.png" />
+                    <frame duration="1" hotspotX="0.504425" hotspotY="0.501992" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\banana_1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="half_2" sid="184548818585770">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="511243858645295">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="358423080272054">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="989387369928690" speed="0">
+                    <frame duration="1" hotspotX="0.503497" hotspotY="0.501393" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\pera_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\2.png">
+                        <collision-poly>
+                            <point x="0.108696" y="0.0386598" />
+                            <point x="0.5" y="0.0283505" />
+                            <point x="0.76087" y="0.0850515" />
+                            <point x="0.891304" y="0.5" />
+                            <point x="0.731884" y="0.904639" />
+                            <point x="0.5" y="0.963918" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503876" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\abacaxi_2.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.502203" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\maca_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\morango_1.png" />
+                    <frame duration="1" hotspotX="0.503497" hotspotY="0.502146" original-source="C:\Users\Alfa\Desktop\Arquivos\Cortadas\banana_2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sprite_score" sid="955052314791204">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Alfa\Desktop\Arquivos\spriteFont\spritefont_orange.png" />
+        </object-type>
+        <object-type name="tempo" sid="717983099452035">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Alfa\Desktop\Arquivos\spriteFont\spritefont_white.png" />
+        </object-type>
+        <object-type name="combo" sid="268249230034008">
+            <plugin id="Spritefont2" />
+            <behaviors>
+                <behavior-type name="Fade" sid="152219989452827">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Alfa\Desktop\Arquivos\spriteFont\spritefont_white.png" />
+        </object-type>
+        <object-type name="explosão" sid="703415413158098">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="213348532552626" speed="8">
+                    <frame duration="1" hotspotX="0.50289" hotspotY="0.503185" original-source="C:\Users\Alfa\Downloads\explosion\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\Alfa\Downloads\explosion\000.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.244898" />
+                            <point x="0.5" y="0.285714" />
+                            <point x="0.708333" y="0.285714" />
+                            <point x="0.6875" y="0.489796" />
+                            <point x="0.645833" y="0.653061" />
+                            <point x="0.5" y="0.77551" />
+                            <point x="0.25" y="0.755102" />
+                            <point x="0.208333" y="0.489796" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.5" original-source="C:\Users\Alfa\Downloads\explosion\001.png" />
+                    <frame duration="1" hotspotX="0.504" hotspotY="0.5" original-source="C:\Users\Alfa\Downloads\explosion\003.png" />
+                    <frame duration="1" hotspotX="0.503597" hotspotY="0.503597" original-source="C:\Users\Alfa\Downloads\explosion\004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Alfa\Downloads\explosion\005.png" />
+                    <frame duration="1" hotspotX="0.503704" hotspotY="0.5" original-source="C:\Users\Alfa\Downloads\explosion\006.png" />
+                    <frame duration="1" hotspotX="0.503704" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="634754576464568">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="325225550448398" speed="0">
+                    <frame duration="1" hotspotX="0.501466" hotspotY="0.506024" original-source="C:\Users\Alfa\Downloads\life\000.png">
+                        <collision-poly>
+                            <point x="0.026393" y="0.108434" />
+                            <point x="0.498534" y="0.144578" />
+                            <point x="0.973607" y="0.108434" />
+                            <point x="0.982405" y="0.493976" />
+                            <point x="0.935484" y="0.73494" />
+                            <point x="0.498534" y="0.987952" />
+                            <point x="0.0645161" y="0.73494" />
+                            <point x="0.0175953" y="0.493976" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501475" hotspotY="0.506173" original-source="C:\Users\Alfa\Downloads\life\001.png" />
+                    <frame duration="1" hotspotX="0.501466" hotspotY="0.506024" original-source="C:\Users\Alfa\Downloads\life\002.png" />
+                    <frame duration="1" hotspotX="0.501466" hotspotY="0.506024" original-source="C:\Users\Alfa\Downloads\life\003.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="595197249771333">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="is_destroy" sid="407383178628139" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="936524757484223" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>fase.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>engine.xml</event-sheet>
+        <event-sheet>globais.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="2">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" uid="4" />
+        <global-instance type="Audio" uid="5">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="button.ogg" />
+        <file name="combo1.ogg" />
+        <file name="combo2.ogg" />
+        <file name="combo3.ogg" />
+        <file name="combo4.ogg" />
+        <file name="endgame.ogg" />
+        <file name="explosion.ogg" />
+        <file name="ice1.ogg" />
+        <file name="ice2.ogg" />
+        <file name="ice3.ogg" />
+        <file name="slash1.ogg" />
+        <file name="slash2.ogg" />
+        <file name="slash3.ogg" />
+        <file name="slash4.ogg" />
+        <file name="slash5.ogg" />
+        <file name="slash6.ogg" />
+        <file name="slice.ogg" />
+        <file name="softfail.ogg" />
+        <file name="start.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

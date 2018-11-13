@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>engine</name>
+    <events>
+        <event-block sid="791131512987288">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="337215436570748" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="596710149841829" type="System">
+                    <param id="0" name="Variable">heart</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="758484586467392" type="System">
+                    <param id="0" name="Variable">timezinho</param>
+                    <param id="1" name="Value">60</param>
+                </action>
+                <action id="-9" name="Set value" sid="586027490342685" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="893213094299908" type="System">
+                    <param id="0" name="Variable">delay</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="488958183756526" title="Slash">
+            <sub-events>
+                <event-block sid="275173958250990">
+                    <conditions>
+                        <condition id="0" name="On any touch start" sid="498106513698730" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="749514864115004" type="System">
+                            <param id="0" name="Variable">slash_x</param>
+                            <param id="1" name="Value">Touch.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="992055149141932" type="System">
+                            <param id="0" name="Variable">slash_y</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="875146907988104">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="589148315907018" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="510880382745023" type="System">
+                            <param id="0" name="Object to create">slash</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="X">slash_x</param>
+                            <param id="3" name="Y">slash_y</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="956817811960918" type="slash">
+                            <param id="0" name="Width">distance(slash_x,slash_y,Touch.X,Touch.Y)</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="588478795203957" type="slash">
+                            <param id="0" name="Height">Self.Width  / 15</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="975598208716686" type="slash">
+                            <param id="0" name="Angle">angle( slash_x,slash_y,Touch.X,Touch.Y)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="182547854977668" type="System">
+                            <param id="0" name="Variable">slash_x</param>
+                            <param id="1" name="Value">Touch.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="143032131569651" type="System">
+                            <param id="0" name="Variable">slash_y</param>
+                            <param id="1" name="Value">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="365069243605198">
+            <conditions>
+                <condition id="0" name="On function" sid="959573480925671" type="Function">
+                    <param id="0" name="Name">&quot;createFruits&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="704027646992902" type="System">
+                    <param id="0" name="Object to create">Frutinha</param>
+                    <param id="1" name="Layer">&quot;main&quot;</param>
+                    <param id="2" name="X">120 + random( LayoutWidth - 250 )</param>
+                    <param id="3" name="Y">LayoutHeight + ( Frutinha.Width / 2) </param>
+                </action>
+                <action id="5" name="Set frame" sid="925307627167202" type="Frutinha">
+                    <param id="0" name="Frame number">Function.Param( 0)</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="963195908248054" type="Frutinha">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">-700</param>
+                </action>
+                <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="323919615680143" type="Frutinha">
+                    <param id="0" name="Angle">-85 - random(11)</param>
+                </action>
+                <action behavior="Rotate" id="0" name="Set speed" sid="450538145815848" type="Frutinha">
+                    <param id="0" name="Speed">choose( -20,20)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="139159690961211">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="808401522635297" type="System">
+                    <param id="0" name="Interval (seconds)">delay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="947639284406818" type="Function">
+                    <param id="0" name="Name">&quot;createFruits&quot;</param>
+                    <param id="1" name="Parameter {n}">choose(0,1,2,3,4,5,6)</param>
+                </action>
+                <action id="0" name="Call function" sid="471836621483433" type="Function">
+                    <param id="0" name="Name">&quot;createFruits&quot;</param>
+                    <param id="1" name="Parameter {n}">choose(0,1,2,3,4,5,6)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="155013765603259">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="281668585680871" type="System">
+                    <param id="0" name="Interval (seconds)">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="434177748936491" type="System">
+                    <param id="0" name="Variable">delay</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">delay_max</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="572082002987156" type="System">
+                    <param id="0" name="Variable">delay</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="353466262738082">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="772617467208114" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="3" name="Accelerate" sid="710481223299806" type="Frutinha">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Acceleration">350</param>
+                </action>
+                <action behavior="CustomMovement" id="3" name="Accelerate" sid="434682053153378" type="half_1">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Acceleration">random(550,1200)</param>
+                </action>
+                <action behavior="CustomMovement" id="3" name="Accelerate" sid="878570515876031" type="half_2">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Acceleration">random(550,1200)</param>
+                </action>
+                <action id="0" name="Set text" sid="720384492244240" type="tempo">
+                    <param id="0" name="Text">timezinho</param>
+                </action>
+                <action id="0" name="Set text" sid="679184339155180" type="sprite_score">
+                    <param id="0" name="Text">score</param>
+                </action>
+                <action id="5" name="Set frame" sid="836630855644248" type="Sprite2">
+                    <param id="0" name="Frame number">heart</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="133343313712136">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="243617987437360" type="slash">
+                    <param id="0" name="Object">Frutinha</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="831550430130933" type="slash">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">Frutinha.Width / 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="857703982442564" type="Frutinha" />
+                <action id="7" name="Play (by name)" sid="945939534636655" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;slash&quot;&amp;choose(1,2,3,4,5,6) </param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="475362220010041" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1" sid="125709691910642">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="349851320981349" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="947558958621944" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="352386590651661" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="996432133675456" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="924797286527429" type="Frutinha">
+                            <param id="0" name="Object">Particles2</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="914053785080993">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="133880720267804" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="179528908949229" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="393792654681506" type="Frutinha">
+                            <param id="0" name="Object">Particles</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="280242493056026">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="999698724510758" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="518659681355590" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="750159420710733" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">2</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="586023350486223" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">5</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="391707210653517" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">3</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="962124387083781" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="285679012716010" type="Frutinha">
+                            <param id="0" name="Object">half_1</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="819488140193438" type="half_1">
+                            <param id="0" name="Frame number">Frutinha.AnimationFrame</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="300147120767975" type="Frutinha">
+                            <param id="0" name="Object">half_2</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="694853708823995" type="half_2">
+                            <param id="0" name="Frame number">Frutinha.AnimationFrame</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="192286264481105">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="149287010632160" type="Frutinha">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="736736027568125" type="Frutinha">
+                            <param id="0" name="Object">explosão</param>
+                            <param id="1" name="Layer">&quot;main&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="563182525008804" type="Audio">
+                            <param id="0" name="Audio file">explosion</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="140349803228207" type="System">
+                            <param id="0" name="Variable">slash_x</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="725007754639107" type="System">
+                            <param id="0" name="Variable">heart</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="763358692096475">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="499571245850355" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="463118316215970" type="System">
+                    <param id="0" name="Variable">timezinho</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="443837524462449" type="System">
+                    <param id="0" name="Variable">timezinho</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="207694760564180" title="Combo">
+            <sub-events>
+                <event-block sid="968280945371564">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="920006154434942" type="Frutinha" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="857349680512344" type="System">
+                            <param id="0" name="Variable">combo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="219984758559010">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="308896433433002" type="System">
+                            <param id="0" name="Interval (seconds)">0.3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="132832472471420">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="954058005811643" type="System">
+                                    <param id="0" name="Variable">combo</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="632504748846472" type="System">
+                                    <param id="0" name="Object to create">combo</param>
+                                    <param id="1" name="Layer">&quot;main&quot;</param>
+                                    <param id="2" name="X">LayoutWidth / 2</param>
+                                    <param id="3" name="Y">LayoutHeight / 2</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="266725549036325" type="System">
+                                    <param id="0" name="Variable">score</param>
+                                    <param id="1" name="Value">combo * 5</param>
+                                </action>
+                                <action id="0" name="Set text" sid="859574919853706" type="combo">
+                                    <param id="0" name="Text">combo&amp;&quot;X Combo&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="641517775260234" type="System">
+                                    <param id="0" name="Variable">timezinho</param>
+                                    <param id="1" name="Value">combo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="211000745315617">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="853300016544927" type="System">
+                                    <param id="0" name="Variable">combo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="631784747665757">
+            <conditions>
+                <condition id="4" name="On finished" sid="936438371384793" type="explosão">
+                    <param id="0" name="Animation">&quot;default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="334455109498826" type="explosão" />
+            </actions>
+        </event-block>
+        <event-block sid="538635140727147">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="826470211039591" type="Frutinha" />
+                <condition id="3" name="Compare frame" sid="622216387791727" type="Frutinha">
+                    <param id="0" name="Comparison">1</param>
+                    <param id="1" name="Number">6</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="726899092975553" type="Frutinha">
+                    <param id="0" name="Instance variable">is_destroy</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="886590128477958" type="System">
+                    <param id="0" name="Variable">heart</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="938625044697339" type="Frutinha">
+                    <param id="0" name="Instance variable">is_destroy</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="387160828683827">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="197099917281534" type="Frutinha">
+                    <param id="0" name="Object">Sprite3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="670034894017415" type="Frutinha">
+                    <param id="0" name="Instance variable">is_destroy</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="838118669911059">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="820813476603891" type="System">
+                    <param id="0" name="Variable">heart</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="261778495993275" type="System">
+                    <param id="0" name="Variable">timezinho</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="375596174067319" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
